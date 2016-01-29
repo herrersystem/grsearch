@@ -6,7 +6,7 @@ Search keyword within string chars and files. More complete than _str.find(keywo
 $ pip install grsearch
 ```
 ### Compatibility
-- Python3.4
+- Python 2.7 - 3.4
 - Linux/Windows
 
 ## Usage
