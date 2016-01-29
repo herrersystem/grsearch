@@ -11,6 +11,7 @@ $ pip install grsearch
 
 ## Usage
 
+### With string characters
 ```
 import grsearch
 
@@ -21,29 +22,71 @@ text="""
 keywords=['python','systems']
 
 #return list [[keyword, number_of_occurences, [positions]]
-result=search(test, keywords)
+result=grsearch.search(test, keywords)
 
 print(result)
 ```
 
 ```
-[['python', 2, [0, 87]], ['systems', 2, [69, 130]]]
+result: [['python', 2, [0, 87]], ['systems', 2, [69, 130]]]
 ```
 ### Examples with more parameters :
 ```
-result=search(test, keywords, case_sensitive=True)
+result=grsearch.search(test, keywords, case_sensitive=True)
 print(result)
 ```
 
 ```
-[['python', 1, [87]], ['systems', 2, [69, 130]]]
+result: [['python', 1, [87]], ['systems', 2, [69, 130]]]
 ```
 
 ```
-result=search(test, keywords, limit_iteration=1)
+result=grsearch.search(test, keywords, limit_iteration=1)
 print(result)
 ```
 
 ```
-[['python', 1, [87]], ['systems', 2, [69, 130]]]
+result: [['python', 1, [0]], ['systems', 1, [69]]]
+```
+
+### With files
+```
+import grsearch
+
+path_file="Documents/text.txt"
+keywords=['python','systems']
+
+#return list [[keyword, number_of_occurences, [positions]]
+result=grsearch.search_infile(path_file, keywords)
+
+print(result)
+```
+
+```
+result: [['python', 2, [0, 87]], ['systems', 2, [69, 130]]]
+```
+All parameters (case_sensitive, limit_iteration, exactly) is available with search within file.
+
+### Parameter __exactly__
+
+```
+import grsearch
+
+text="I'm herrersystem and my operating system is not windows."
+keywords=['system']
+
+#return list [[keyword, number_of_occurences, [positions]]
+result=grsearch.search(text, keywords, exactly=True)
+
+print(result)
+```
+
+```
+result: [['system', 1, [34]]]
+```
+
+_Result with exactly = False_
+
+```
+result: [['system', 2, [10, 34]]]
 ```
