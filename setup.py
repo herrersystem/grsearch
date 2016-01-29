@@ -9,5 +9,4 @@ setup(name='grsearch',
 	description='find keyword within string chars or files.',
 	license='MIT',
 	packages=["grsearch"],
-	plateform=['ALL'],
 )

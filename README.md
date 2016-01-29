@@ -22,7 +22,7 @@ text="""
 keywords=['python','systems']
 
 #return list [[keyword, number_of_occurences, [positions]]
-result=grsearch.search(test, keywords)
+result=grsearch.search(text, keywords)
 
 print(result)
 ```
@@ -32,7 +32,7 @@ result: [['python', 2, [0, 87]], ['systems', 2, [69, 130]]]
 ```
 ### Examples with more parameters :
 ```
-result=grsearch.search(test, keywords, case_sensitive=True)
+result=grsearch.search(text, keywords, case_sensitive=True)
 print(result)
 ```
 
@@ -41,7 +41,7 @@ result: [['python', 1, [87]], ['systems', 2, [69, 130]]]
 ```
 
 ```
-result=grsearch.search(test, keywords, limit_iteration=1)
+result=grsearch.search(text, keywords, limit_iteration=1)
 print(result)
 ```
 
