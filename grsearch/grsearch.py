@@ -96,11 +96,17 @@ def s_notexactly(text, keyword, case_sensitive, limit_iteration):
 		for i,kw in enumerate(keyword):
 			if limit_iteration and result[i][1] >= limit_iteration:
 				continue
+			
+			index=0
+			index2=0
+			while index != -1:	
+				index=word[index2:].find(kw)
 				
-			index=word.find(kw)
-			if index != -1:
-				result[i][1]+=1
-				result[i][2].append(playhead+index)
+				if index != -1:
+					result[i][1]+=1
+					result[i][2].append(playhead+index2)
+					
+					index2+=len(kw)
 									
 		playhead+=len(word)+1 #add 1 for space.
 		
@@ -183,11 +189,17 @@ def f_notexactly(filename, keyword, case_sensitive, limit_iteration):
 				for i,kw in enumerate(keyword):
 					if limit_iteration and result[i][1] >= limit_iteration:
 						continue
-						
-					index=word.find(kw)
-					if index != -1:
-						result[i][1]+=1
-						result[i][2].append(playhead+index)
+					
+					index=0
+					index2=0
+					while index != -1:	
+						index=word[index2:].find(kw)
+				
+						if index != -1:
+							result[i][1]+=1
+							result[i][2].append(playhead+index2)
+							
+							index2+=len(kw)
 											
 				playhead+=len(word)+1 #add 1 for space.
 			
