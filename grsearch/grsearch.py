@@ -37,6 +37,7 @@ def clean_text(text):
 	text=text.replace('\'', ' ')
 	text=text.replace('(', ' ')
 	text=text.replace(')', ' ')
+	text=text.replace('-', ' ')
 	
 	return text
 
@@ -141,7 +142,6 @@ def f_exactly(filename, keyword, case_sensitive, limit_iteration):
 				text=text.lower()
 			
 			text=str(text)[2:-1] #Conversion bytes -> str.
-			print(text)
 			text=clean_text(text) #Remove ponctuation.
 			
 			#Search keyword within the text.		
