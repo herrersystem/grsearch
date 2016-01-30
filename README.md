@@ -112,7 +112,12 @@ for i,r in enumerate(result):
 	print('text {}: {}'.format(i+1, r))
 
 ```
-
+```
+result:
+text 1: [['es', 0.022011407381960155], ['tu', 0.022011407381960155]]
+text 2: [['es', 0.014674271587973436], ['tu', 0.029348543175946873]]
+text 3: [['es', 0.0], ['tu', 0.0]]
+```
 Same example with file:
 ```
 corpus=['text1.txt','text2.txt','text3.txt']
