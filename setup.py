@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='grsearch',
-	version='0.4',
+	version='0.5',
 	author='herrersystem',
 	author_email='herrersystem@mailoo.org',
 	url="http://github.com/herrersystem/grsearch",
