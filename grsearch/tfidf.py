@@ -74,16 +74,3 @@ def calcul_tfidf(keyword, corpus, is_file=False):
 	
 	return result_tfidf	
 	
-
-corpus=[
-	'je suis ici et toi où es-tu ?',
-	'tu es trop loin pour que je te tue. Tu comprends ?',
-	'Il est pas croyable, je le hais'
-]
-keyword=['es', 'tu']
-
-result_tfidf=calcul_tfidf(keyword, corpus)
-for i,r in enumerate(result_tfidf):
-	print('text {}: {}'.format(i+1, r))	
-
-	
