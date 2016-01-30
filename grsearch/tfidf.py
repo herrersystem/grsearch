@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import math
-from grsearch import *
+from grsearch.gsearch import *
 
 
 def nbr_word(text, is_file):
