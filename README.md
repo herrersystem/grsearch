@@ -90,3 +90,37 @@ _Result with exactly = False_
 ```
 result: [['system', 2, [10, 34]]]
 ```
+
+### Term Frequency-Inverse Document Frequency
+for more informations on TF-IDF go [wikipedia](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
+
+#### Use TF-IDF with grsearch
+
+```
+from grsearch import tfidf
+
+corpus=[
+	'je suis ici et toi où es-tu ?',
+	'tu es trop loin pour que je te tue. Tu comprends ?',
+	'Il est pas croyable, je le hais'
+]
+keywords=['es', 'tu']
+
+result=tfidf.calcul_tfidf(keywords, corpus)
+
+for i,r in enumerate(result):
+	print('text {}: {}'.format(i+1, r))
+
+```
+
+Same example with file:
+```
+corpus=['text1.txt','text2.txt','text3.txt']
+keywords=['es', 'tu']
+
+result=tfidf.calcul_tfidf(keywords, corpus, is_file=True)
+
+for i,r in enumerate(result):
+	print('text {}: {}'.format(i+1, r))
+```
+Don't forget __is_file=True__ !
