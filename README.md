@@ -13,7 +13,7 @@ $ pip install grsearch
 
 ### With string characters
 ```
-import grsearch
+from grsearch import grsearch
 
 text="""
   Python interpreters are available for installation on many operating systems,
@@ -51,7 +51,7 @@ result: [['python', 1, [0]], ['systems', 1, [69]]]
 
 ### With files
 ```
-import grsearch
+from grsearch import grsearch
 
 path_file="Documents/text.txt"
 keywords=['python','systems']
@@ -70,7 +70,7 @@ All parameters (case_sensitive, limit_iteration, exactly) is available with sear
 ### Parameter __exactly__
 
 ```
-import grsearch
+from grsearch import grsearch
 
 text="I'm herrersystem and my operating system is not windows."
 keywords=['system']
